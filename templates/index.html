@@ -1,0 +1,108 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CS PROJECT UwU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href={% static "fonts/icomoon/style.css" %}>
+
+    <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
+    <link rel="stylesheet" href={% static "css/jquery-ui.css" %}>
+    <link rel="stylesheet" href={% static "css/owl.carousel.min.css" %}>
+    <link rel="stylesheet" href={% static "css/owl.theme.default.min.css" %}>
+    <link rel="stylesheet" href={% static "css/owl.theme.default.min.css" %}>
+
+    <link rel="stylesheet" href={% static "css/jquery.fancybox.min.css" %}>
+
+    <link rel="stylesheet" href={% static "css/bootstrap-datepicker.css" %}>
+
+    <link rel="stylesheet" href={% static "fonts/flaticon/font/flaticon.css" %}>
+
+    <link rel="stylesheet" href={% static "css/aos.css" %}>
+
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+
+    <style>
+      body {
+        background-color: #4CAF50;
+      }
+    </style>
+    
+  </head>
+  <body class="body" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div style="background-image: url('img_girl.jpg');">
+  
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
+          
+          <div class="">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="accounts/newad" class="nav-link">New Admission</a></li>
+                <li><a href="accounts/feegen" class="nav-link">Fee Generation</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="text-left">
+
+            <nav class="site-navigation position-relative" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+
+                {% if user.is_authenticated %}
+                <li class="nav-link">Hello {{user.first_name}}</li>
+                <li><a href="accounts/logout" class="nav-link">Logout</a></li>
+                {% else %}
+                <li><a href="accounts/choose" class="nav-link">Register</a></li>
+                <li><a href="accounts/login" class="nav-link">Login</a></li>
+                {% endif %}
+              </ul>
+            </nav>
+
+
+            <div class="d-inline-block d-lg-none" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      
+    </header>
+  <script src={% static "js/jquery-3.3.1.min.js"></script>
+  <script src={% static "js/jquery-ui.js"></script>
+  <script src={% static "js/popper.min.js"></script>
+  <script src={% static "js/bootstrap.min.js" %}></script>
+  <script src={% static "js/owl.carousel.min.js" %}></script>
+  <script src={% static "js/jquery.easing.1.3.js" %}></script>
+  <script src={% static "js/aos.js" %}></script>
+  <script src={% static "js/jquery.fancybox.min.js" %}></script>
+  <script src={% static "js/jquery.sticky.js" %}></script>
+  <script src={% static "js/isotope.pkgd.min.js" %}></script>
+
+  
+  <script src={% static "js/main.js" %}></script>
+    
+  </body>
+</html>
